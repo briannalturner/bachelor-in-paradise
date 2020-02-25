@@ -6,3 +6,9 @@
     Hometown: <%= @man.hometown %>
 </div>
 
+<button><%= link_to "Edit Me!", edit_man_path(@man) %></button>
+<%= form_tag man_path(@man), method: :delete do %>
+    <%= submit_tag "Destroy Me!" %>
+<% end %>
+
+<%= link_to "Back to Home Page", men_path %>
