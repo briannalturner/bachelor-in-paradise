@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -20,9 +21,9 @@ dylan = Man.create(name: "Dylan", age: 27, hometown: "California")
 mike = Man.create(name: "Mike", age: 31, hometown: "Texas")
 blake = Man.create(name: "Blake", age: 32, hometown: "California")
 
-rel1 = Relationship.create(woman_id: hannah_b, man_id: jed, status: "over")
-rel2 = Relationship.create(woman_id: demi, man_id: mike, status: "dating")
-rel3 = Relationship.create(woman_id: hannah_g, man_id: dylan, status: "engaged")
-rel4 = Relationship.create(woman_id: hannah_g, man_id: blake, status: "over")
-rel5 = Relationship.create(woman_id: katie, man_id: jed, status: "dating")
-rel6 = Relationship.create(woman_id: demi, man_id: blake, status: "over")
+rel1 = Relationship.create(woman: hannah_b, man: jed, status: "over")
+rel2 = Relationship.create(woman: demi, man: mike, status: "dating")
+rel3 = Relationship.create(woman: hannah_g, man: dylan, status: "engaged")
+rel4 = Relationship.create(woman: hannah_g, man: blake, status: "over")
+rel5 = Relationship.create(woman: katie, man: jed, status: "dating")
+rel6 = Relationship.create(woman: demi, man: blake, status: "over")
