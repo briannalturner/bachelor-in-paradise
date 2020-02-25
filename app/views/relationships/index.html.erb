@@ -3,6 +3,6 @@
 
 <% @relationships.each do |rel| %>
     <div>
-        <%= link_to "Man: #{rel.man.name} | Woman: #{rel.woman.name}", relationship_path(rel) %>
+        <%= link_to "#{rel.man.name} & #{rel.woman.name}", relationship_path(rel) %>
     </div>
 <% end %>
