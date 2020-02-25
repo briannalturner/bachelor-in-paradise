@@ -27,6 +27,12 @@ class WomenController < ApplicationController
         redirect_to woman_path(@woman)
     end
 
+    def destroy
+        @woman = Woman.find(params[:id])
+        @woman.destroy
+        redirect_to women_path
+    end
+
 private
     def woman_params
         params.require(:woman).permit(:name, :age, :hometown)
