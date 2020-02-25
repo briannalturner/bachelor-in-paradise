@@ -10,7 +10,6 @@
 </div>
 <button><%= link_to "Back to Relationships", relationships_path %></button>
 
-<%= form_tag relationship_path(@relationship), method: :delete do %>
+<%= form_tag relationship_path(@relationship) method: :patch do %>
 <%= submit_tag "End This Relationship!" %>
 <% end %>
-

@@ -23,6 +23,12 @@ class RelationshipsController < ApplicationController
         redirect_to relationships_path
     end
 
+    def breakup
+        @relationship = Relationship.find(params[:id])
+        @relationship.update(status: "over", end_date: Time.now.to_date)
+        redirect_to relationship_path(@relationship)
+    end
+
 private
     def relationship_params
         params.require(:relationship).permit(:woman_id, :man_id, :status, :start_date, :end_date)
