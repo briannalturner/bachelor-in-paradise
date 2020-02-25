@@ -1,1 +1,9 @@
-<h1>Hello World</h1>
+<h1>Enter a New Relationship</h1>
+
+<%= form_for @relationship do |f| %>
+    <%= f.label :start_date, "Anniversary Date:" %>
+    <%= f.date_field :start_date %>
+    <%= f.collection_select(:man_id, Man.all, :id, :name) %>
+    <%= f.collection_select(:woman_id, Woman.all, :id, :name) %>
+    <%= f.submit %>
+<% end %>

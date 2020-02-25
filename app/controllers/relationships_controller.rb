@@ -9,11 +9,17 @@ class RelationshipsController < ApplicationController
     end
 
     def new
-        @relationship = Relationship.find(params[:id])
+        @relationship = Relationship.new
     end
 
     def create
+        @relationship = Relationship.create(relationship_params)
+        redirect_to relationship_path(@relationship)
+    end
 
+private
+    def relationship_params
+        params.require(:relationship).permit(:woman_id, :man_id, :status, :start_date, :end_date)
     end
 
 end
