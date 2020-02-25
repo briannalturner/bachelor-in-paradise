@@ -17,6 +17,12 @@ class RelationshipsController < ApplicationController
         redirect_to relationship_path(@relationship)
     end
 
+    def destroy
+        @relationship = Relationship.find(params[:id])
+        @relationship.destroy
+        redirect_to relationships_path
+    end
+
 private
     def relationship_params
         params.require(:relationship).permit(:woman_id, :man_id, :status, :start_date, :end_date)

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: "application#homepage"
+  get '/', to: "application#homepage", as: "homepage"
   resources :relationships
   resources :men
   resources :women

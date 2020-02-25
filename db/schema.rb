@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_02_25_205810) do
   create_table "relationships", force: :cascade do |t|
     t.integer "woman_id"
     t.integer "man_id"
-    t.string "status"
+    t.string "status", default: "dating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "start_date"

@@ -12,11 +12,14 @@
         <%= link_to "Partner: #{rel.man_id}; Status: #{rel.status}", relationship_path(rel) %>
     </div>
 <% end %> -->
-
+<p></p>
+<div>
 <button><%= link_to "Edit Me!", edit_woman_path(@woman) %></button>
 
 <%= form_tag woman_path(@woman), method: :delete do %>
 <%= submit_tag "Destroy Me!" %>
 <% end %>
+</div>
+<p></p>
 
-<%= link_to "Back to Home Page", women_path %>
+<%= link_to "Back to Women Profiles", women_path %>

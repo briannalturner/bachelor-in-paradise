@@ -8,4 +8,9 @@
         <p>They've been together for <%= @relationship.relationship_length %> days.</p>
     <% end %>
 </div>
-<%= link_to "Back to Relationships", relationships_path %>
+<button><%= link_to "Back to Relationships", relationships_path %></button>
+
+<%= form_tag relationship_path(@relationship), method: :delete do %>
+<%= submit_tag "End This Relationship!" %>
+<% end %>
+

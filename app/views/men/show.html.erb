@@ -5,10 +5,14 @@
 <div>
     Hometown: <%= @man.hometown %>
 </div>
-
+<p></p>
+<div>
 <button><%= link_to "Edit Me!", edit_man_path(@man) %></button>
+
 <%= form_tag man_path(@man), method: :delete do %>
     <%= submit_tag "Destroy Me!" %>
 <% end %>
+</div>
+<p></p>
 
-<%= link_to "Back to Home Page", men_path %>
+<%= link_to "Back to Men Profiles", men_path %>
