@@ -1,1 +1,11 @@
-<h1>Relationship</h1>
+<h1><%= @relationship.man.name%> & <%= @relationship.woman.name %></h1>
+<div>
+    <% if @relationship.status == "over" %>
+        <h2>So sad! They broke up.</h2>
+        <p>They lasted <%= @relationship.relationship_length %> days.</p>
+    <% else %>
+        <h2>They're <%= @relationship.status %>!</h2>
+        <p>They've been together for <%= @relationship.relationship_length %> days.</p>
+    <% end %>
+</div>
+<%= link_to "Back to Relationships", relationships_path %>

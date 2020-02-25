@@ -1,8 +1,9 @@
 <h1>All the Relationships</h1>
 
-
 <% @relationships.each do |rel| %>
     <div>
         <%= link_to "#{rel.man.name} & #{rel.woman.name}", relationship_path(rel) %>
     </div>
 <% end %>
+
+<%= link_to "Create a New Relationship", new_relationship_path %>

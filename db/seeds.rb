@@ -21,10 +21,11 @@ dylan = Man.create(name: "Dylan", age: 27, hometown: "California")
 mike = Man.create(name: "Mike", age: 31, hometown: "Texas")
 blake = Man.create(name: "Blake", age: 32, hometown: "California")
 
-rel1 = Relationship.create(woman: hannah_b, man: jed, status: "over", start_date: Date.new(2018, 03, 02), end_date: Date.new(2019, 05, 10))
-byebug
-rel2 = Relationship.create(woman: demi, man: mike, status: "dating")
-rel3 = Relationship.create(woman: hannah_g, man: dylan, status: "engaged")
-rel4 = Relationship.create(woman: hannah_g, man: blake, status: "over")
-rel5 = Relationship.create(woman: katie, man: jed, status: "dating")
-rel6 = Relationship.create(woman: demi, man: blake, status: "over")
+rel1 = Relationship.create(woman: hannah_b, man: jed, status: "over", start_date: Date.new(2019, 03, 02), end_date: Date.new(2019, 05, 10))
+rel2 = Relationship.create(woman: demi, man: mike, status: "dating", start_date: Date.new(2019, 05, 9))
+rel3 = Relationship.create(woman: hannah_g, man: dylan, status: "engaged", start_date: Date.new(2019, 03, 02))
+rel4 = Relationship.create(woman: hannah_g, man: blake, status: "over", start_date: Date.new(2019, 05, 07), end_date: Date.new(2019, 05, 10))
+rel5 = Relationship.create(woman: katie, man: jed, status: "dating", start_date: Date.new(2019, 06, 02))
+rel6 = Relationship.create(woman: demi, man: blake, status: "over", start_date: Date.new(2019, 05, 9), end_date: Date.new(2019, 05, 10))
+
+0

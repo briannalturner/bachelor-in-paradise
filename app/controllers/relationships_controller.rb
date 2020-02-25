@@ -8,4 +8,12 @@ class RelationshipsController < ApplicationController
         @relationship = Relationship.find(params[:id])
     end
 
+    def new
+        @relationship = Relationship.find(params[:id])
+    end
+
+    def create
+
+    end
+
 end
