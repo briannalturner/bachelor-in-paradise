@@ -13,7 +13,23 @@ class WomenController < ApplicationController
     end
 
     def create
+        @woman = Woman.create(woman_params)
+        redirect_to woman_path(@woman)
+    end
 
+    def edit
+        @woman = Woman.find(params[:id])
+    end
+
+    def update
+        @woman = Woman.find(params[:id])
+        @woman.update(woman_params)
+        redirect_to woman_path(@woman)
+    end
+
+private
+    def woman_params
+        params.require(:woman).permit(:name, :age, :hometown)
     end
 
 end
