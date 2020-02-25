@@ -1,0 +1,8 @@
+<h1>All The Women</h1>
+<% @women.each do |woman| %>
+    <div>
+        <%= link_to woman.name, woman_path(woman) %>
+    </div>
+<% end %>
+
+<%= link_to "Make a New Woman", new_woman_path %>

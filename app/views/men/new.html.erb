@@ -1,0 +1,14 @@
+<h1>Make a New Man!</h1>
+
+<%= form_for @man do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :age %><br>
+    <%= f.number_field :age %><br>
+
+    <%= f.label :hometown %><br>
+    <%= f.text_field :hometown %><br>
+
+    <%= f.submit %>
+<% end %>
